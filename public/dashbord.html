@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GroupChatApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here, if needed */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #createGroupButton{
+            background-color: darkslategray;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddaeae;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(126, 68, 68, 0.796);
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+       
+            <div class="col-sm-4 bg-info" style="height: 100vh;">
+                <h2 style="color: white; background-color: darkslategray; text-align: center;">Create Group</h2>
+                <form>
+                   
+                    <button type="submit" class="btn btn-primary" id="topLeftButton">Create Group</button>
+                </form>
+            </div>
+
+            <div class="col-sm-8 bg-secondary" style="height: 100vh;">
+                <h2 style="color: white; background-color: darkslategray; text-align: center;">Chat Window</h2>
+            </div>
+        </div>
+    </div>
+      
+    <div class="popup" id="popup">
+        <span class="close" id="close">&times;</span>
+        <form>
+            <div class="form-group">
+                <label for="name">Group Name:</label>
+                <input type="text" id="group_name" name="group_name" placeholder="Enter Group Name" required>
+            </div>
+            <div class="form-group">
+                <label for="checkbox">Checkbox:</label>
+                <div name="participants" id="checkboxOptions"></div>
+            </div>
+            <button class="btn" id="submit">Create</button>
+        </form>
+    </div>
+  
+   <script src="dashbord.js"></script>
+   <script src="group.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
